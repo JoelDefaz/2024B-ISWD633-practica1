@@ -4,7 +4,7 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+Una imagen se refiere a una "plantilla" en la que se define o contiene todo lo necesario para ejecutar una aplicación la cual sirve para correr una instancia ejecutable de una imagen, lo que se refiere a contenedor. Por lo que para crear un contenedor necesita de una imagen en la que se debe basar
 
 ![Imagen y contenedores](img/imagenContenedores.JPG)
 ## Comandos para imágenes
@@ -24,13 +24,19 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+```
+docker pull hello-world
+```
 
-**¿Qué es nginx**
-# COMPLETAR 
+**¿Qué es nginx?**
+
+Se refiere a un servidor web de código abierto que puede servir como proxy inverso, balanceador de carga y servidor de caché.
+Conocido por su alta flexibilidad y alto desarrollo utilizando la menor cantidad de recursos.
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+```
+docker pull nginx:alpine
+```
 
 ### Listar imágenes
 
@@ -38,7 +44,8 @@ Descargar la imagen  **nginx** en la versión **alpine**
 docker images
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+## Resultado
+![Resultado](imgPractica/resultado1.png)
 
 **Identificadores**
 
@@ -53,10 +60,14 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+```
+docker inspect hello-world
+```
 
-**¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+**¿Con qué algoritmo se está generando el ID de la imagen?**
+
+Este ID se crea utilizando un algoritmo de hash, específicamente el SHA-256 (Secure Hash Algorithm 256 bits).
+Se refiere a un hash criptografico que indica los datos de la imagen,archivos, capaz, etc. Por ello si cambia algo dentro de la imagen, su identificador tambien cambia. 
 
 ### Filtrar imágenes
 
@@ -73,7 +84,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+```
+docker rmi hello-world
+```
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
