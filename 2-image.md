@@ -73,7 +73,6 @@ Se refiere a un hash criptografico que indica los datos de la imagen,archivos, c
 
 ```
 docker images | grep <termino a buscar>
-
 ```
 
 ### Para eliminar una imagen
